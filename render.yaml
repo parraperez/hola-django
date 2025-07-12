@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hola-django
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: una_clave_segura_que_tu_elijas
+      - key: PYTHONUNBUFFERED
+        value: "1"
